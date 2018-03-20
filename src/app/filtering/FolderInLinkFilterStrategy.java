@@ -16,8 +16,8 @@ public class FolderInLinkFilterStrategy implements IFilterStrategy {
     private final Logger logger = Logger.getLogger("Filter");
 
     private boolean linkContainsFolderName(String link, String folder) {
-        return
-                link.replace("git://github.com/", "").toLowerCase().contains(folder);
+
+        return link.replace("git://github.com/", "").toLowerCase().contains(folder.toLowerCase());
     }
 
     @Override
